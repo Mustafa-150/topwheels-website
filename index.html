@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TopWheels Int | Quality Used Cars in North Carolina</title>
+  <meta name="description"
+        content="Explore quality used vehicles at TopWheels Int, Auto Sales LLC. Browse inventory, compare vehicles, learn about financing, and contact our North Carolina dealership.">
+
+  <meta name="theme-color" content="#101318">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Accessibility: skip directly to the main content -->
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- HEADER AND NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html"
+         aria-label="TopWheels Int, Auto Sales LLC homepage">
+        
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+
+        <span class="brand-text">
+          <strong>TOPWHEELS INT</strong>
+          <small>AUTO SALES LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav"
+           id="primary-navigation"
+           aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="financing.html">Financing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="header-contact" href="tel:+13366874162">
+        Call (336) 687-4162
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-layout">
+
+        <div class="hero-content">
+          <span class="eyebrow">WELCOME TO TOPWHEELS INT</span>
+
+          <h1>
+            Your Next Drive
+            <span>Starts Here.</span>
+          </h1>
+
+          <p class="hero-description">
+            Discover your next vehicle with an easier way to
+            browse, compare, and explore used cars.
+            Find the right fit for your lifestyle and budget.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="inventory.html">
+              Explore Inventory
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="btn btn-outline" href="contact.html">
+              Contact Our Team
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">✓</span>
+              <span>Easy Vehicle Search</span>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">✓</span>
+              <span>Clear Vehicle Details</span>
+            </div>
+
+            <div class="highlight-item">
+              <span class="highlight-icon" aria-hidden="true">✓</span>
+              <span>Helpful Buying Information</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+
+            <!-- Temporary design image; not a dealership listing -->
+            <img
+              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=85"
+              alt="Sports car photographed outdoors"
+              class="hero-image"
+              fetchpriority="high"
+            >
+
+            <div class="hero-image-label">
+              <span class="label-dot"></span>
+              EXPLORE YOUR OPTIONS
+            </div>
+
+          </div>
+
+          <div class="hero-floating-card">
+            <span class="floating-card-icon" aria-hidden="true">★</span>
+            <div>
+              <strong>Find Your Perfect Fit</strong>
+              <p>Search. Compare. Connect.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEARCH INTRODUCTION -->
+    <section class="quick-search-section"
+             aria-labelledby="quick-search-title">
+      <div class="container">
+
+        <div class="quick-search-panel">
+          <div>
+            <span class="section-kicker">START YOUR SEARCH</span>
+            <h2 id="quick-search-title">
+              Looking for something specific?
+            </h2>
+            <p>
+              Browse vehicles by make, fuel type, price,
+              and other useful details.
+            </p>
+          </div>
+
+          <form class="quick-search-form"
+                action="inventory.html"
+                method="get"
+                role="search">
+            <label for="home-search" class="sr-only">
+              Search vehicle inventory
+            </label>
+
+            <input
+              type="search"
+              id="home-search"
+              name="q"
+              placeholder="Try Toyota, SUV, Hybrid, EV..."
+            >
+
+            <button type="submit" class="btn btn-primary">
+              Search Vehicles
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FEATURED INVENTORY -->
+    <section class="section featured-section"
+             aria-labelledby="featured-title">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">EXPLORE VEHICLES</span>
+            <h2 id="featured-title">Featured Vehicles</h2>
+            <p>
+              Preview our demonstration inventory.
+              Vehicle details and availability must be verified.
+            </p>
+          </div>
+
+          <a href="inventory.html" class="text-link">
+            View All Vehicles <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- Cards will be populated from inventory data later -->
+        <div class="featured-grid" id="featuredVehicles">
+
+          <div class="loading-card">
+            <p>Featured vehicles will appear here.</p>
+          </div>
+
+        </div>
+
+        <p class="inventory-disclaimer">
+          Demonstration listings are for website development.
+          They are not confirmed vehicles offered for sale.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- WHY TOPWHEELS -->
+    <section class="section benefits-section"
+             aria-labelledby="benefits-title">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <span class="section-kicker">A SIMPLER EXPERIENCE</span>
+          <h2 id="benefits-title">
+            Shop With More Confidence
+          </h2>
+          <p>
+            The information you need, organized to help
+            you make informed decisions.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">01</div>
+            <h3>Explore Vehicles</h3>
+            <p>
+              Browse vehicle listings with photos,
+              specifications, and useful descriptions.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">02</div>
+            <h3>Compare Your Options</h3>
+            <p>
+              Narrow your search by vehicle attributes
+              to find models that match your needs.
+            </p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon" aria-hidden="true">03</div>
+            <h3>Connect With Us</h3>
+            <p>
+              Ask questions about a vehicle,
+              financing information, or scheduling a visit.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section process-section"
+             aria-labelledby="process-title">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <span class="section-kicker">THREE SIMPLE STEPS</span>
+          <h2 id="process-title">
+            Your Vehicle Search, Simplified
+          </h2>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-step">
+            <span class="step-number">01</span>
+            <h3>Search</h3>
+            <p>
+              Browse our inventory using meaningful
+              vehicle categories and search terms.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">02</span>
+            <h3>Discover</h3>
+            <p>
+              Review vehicle specifications, prices,
+              and details on individual vehicle pages.
+            </p>
+          </article>
+
+          <article class="process-step">
+            <span class="step-number">03</span>
+            <h3>Contact</h3>
+            <p>
+              Reach out to ask questions or
+              arrange your next step.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINANCING -->
+    <section class="section financing-preview"
+             aria-labelledby="financing-title">
+      <div class="container">
+
+        <div class="financing-banner">
+          <div class="financing-content">
+            <span class="section-kicker">FINANCING INFORMATION</span>
+
+            <h2 id="financing-title">
+              Explore Your Financing Options
+            </h2>
+
+            <p>
+              Learn about financing considerations,
+              payment estimates, and questions to ask
+              before purchasing a vehicle.
+            </p>
+
+            <a href="financing.html" class="btn btn-primary">
+              Learn About Financing
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="financing-decoration" aria-hidden="true">
+            <span>TW</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="section final-cta"
+             aria-labelledby="cta-title">
+      <div class="container">
+
+        <div class="final-cta-content">
+          <span class="section-kicker">LET'S GET STARTED</span>
+
+          <h2 id="cta-title">
+            Ready to Find Your Next Vehicle?
+          </h2>
+
+          <p>
+            Browse the inventory or contact
+            TopWheels Int, Auto Sales LLC.
+          </p>
+
+          <div class="cta-actions">
+            <a href="inventory.html" class="btn btn-primary">
+              Browse Inventory
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="brand footer-brand" href="index.html">
+            
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+
+            <span class="brand-text">
+              <strong>TOPWHEELS INT</strong>
+              <small>AUTO SALES LLC</small>
+            </span>
+          </a>
+
+          <p>
+            Explore used vehicles and helpful
+            automotive information in North Carolina.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Vehicle Inventory</a>
+          <a href="financing.html">Financing</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get in Touch</h3>
+
+          <a href="tel:+13366874162">
+            (336) 687-4162
+          </a>
+
+          <a href="mailto:sales@topwheelsinternational.com">
+            sales@topwheelsinternational.com
+          </a>
+
+          <p>North Carolina, USA</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year">2026</span>
+          TopWheels Int, Auto Sales LLC.
+          All rights reserved.
+        </p>
+
+        <p>
+          Designed for an organized, accessible
+          vehicle shopping experience.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

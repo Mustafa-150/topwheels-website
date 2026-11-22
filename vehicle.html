@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vehicle Details | TopWheels Int, Auto Sales LLC</title>
+  <meta name="description"
+        content="Explore vehicle details, specifications, mileage, and pricing at TopWheels Int, Auto Sales LLC.">
+  <meta name="theme-color" content="#101318">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html"
+         aria-label="TopWheels Int, Auto Sales LLC homepage">
+        
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+        <span class="brand-text">
+          <strong>TOPWHEELS INT</strong>
+          <small>AUTO SALES LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav"
+           id="primary-navigation"
+           aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html"
+           class="active"
+           aria-current="page">Inventory</a>
+        <a href="financing.html">Financing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="header-contact" href="tel:+13366874162">
+        Call (336) 687-4162
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- VEHICLE HEADING -->
+    <section class="details-hero">
+      <div class="container">
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="inventory.html">Inventory</a>
+          <span aria-hidden="true">/</span>
+          <span id="vehicleBreadcrumb">Vehicle Details</span>
+        </nav>
+
+        <span class="section-kicker">VEHICLE DETAILS</span>
+
+        <h1 id="vehicleTitle">Loading vehicle...</h1>
+
+        <p id="vehicleSubtitle">
+          Explore specifications and vehicle information.
+        </p>
+
+        <span class="details-demo-badge">
+          DEMONSTRATION LISTING
+        </span>
+
+      </div>
+    </section>
+
+    <!-- MAIN VEHICLE CONTENT -->
+    <section class="details-section">
+      <div class="container">
+
+        <div id="vehicleNotFound" class="details-not-found" hidden>
+          <h2>Vehicle Not Found</h2>
+          <p>
+            This vehicle could not be found in the
+            demonstration inventory.
+          </p>
+          <a class="btn btn-primary" href="inventory.html">
+            Return to Inventory
+          </a>
+        </div>
+
+        <div id="vehicleContent" class="details-layout" hidden>
+
+          <!-- LEFT COLUMN -->
+          <div class="details-main">
+
+            <div class="details-image-card">
+              <div id="vehicleImageContainer"
+                   class="details-image-container">
+              </div>
+
+              <div class="details-image-footer">
+                <span>Vehicle image</span>
+                <span>Illustrative / demo listing</span>
+              </div>
+            </div>
+
+            <!-- OVERVIEW -->
+            <section class="details-panel"
+                     aria-labelledby="overviewHeading">
+
+              <div class="details-panel-heading">
+                <span class="section-kicker">ABOUT THIS VEHICLE</span>
+                <h2 id="overviewHeading">Vehicle Overview</h2>
+              </div>
+
+              <p id="vehicleDescription"
+                 class="vehicle-description">
+              </p>
+
+              <div id="vehicleTags"
+                   class="details-tags">
+              </div>
+
+            </section>
+
+            <!-- SPECIFICATIONS -->
+            <section class="details-panel"
+                     aria-labelledby="specificationsHeading">
+
+              <div class="details-panel-heading">
+                <span class="section-kicker">VEHICLE INFORMATION</span>
+                <h2 id="specificationsHeading">
+                  Specifications
+                </h2>
+              </div>
+
+              <dl id="vehicleSpecifications"
+                  class="specifications-grid">
+              </dl>
+
+            </section>
+
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <aside class="details-sidebar">
+
+            <div class="details-price-card">
+
+              <span class="section-kicker">
+                DEMONSTRATION PRICE
+              </span>
+
+              <div id="vehiclePrice"
+                   class="details-price">
+                —
+              </div>
+
+              <p class="details-price-note">
+                Example pricing only. Not a confirmed
+                dealership offer.
+              </p>
+
+              <div class="details-quick-stats">
+
+                <div>
+                  <span>Mileage</span>
+                  <strong id="vehicleMileage">—</strong>
+                </div>
+
+                <div>
+                  <span>Fuel Type</span>
+                  <strong id="vehicleFuel">—</strong>
+                </div>
+
+                <div>
+                  <span>Body Type</span>
+                  <strong id="vehicleBodyType">—</strong>
+                </div>
+
+                <div>
+                  <span>Drivetrain</span>
+                  <strong id="vehicleDrivetrain">—</strong>
+                </div>
+
+              </div>
+
+              <a id="vehicleContactLink"
+                 class="btn btn-primary details-full-button"
+                 href="contact.html">
+                Ask About This Vehicle →
+              </a>
+
+              <a class="btn btn-outline details-full-button"
+                 href="financing.html">
+                Financing Information
+              </a>
+
+              <a class="details-phone"
+                 href="tel:+13366874162">
+                Call (336) 687-4162
+              </a>
+
+            </div>
+
+            <div class="details-help-card">
+              <h3>Have Questions?</h3>
+              <p>
+                Contact our team to ask about
+                vehicle information and next steps.
+              </p>
+              <a href="contact.html">
+                Contact TopWheels →
+              </a>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BACK TO INVENTORY -->
+    <section class="details-bottom-section">
+      <div class="container">
+        <div class="details-bottom-content">
+          <div>
+            <span class="section-kicker">KEEP EXPLORING</span>
+            <h2>Find the Right Vehicle for You.</h2>
+            <p>
+              Browse more vehicles and compare
+              different options.
+            </p>
+          </div>
+
+          <a href="inventory.html" class="btn btn-primary">
+            Browse All Vehicles →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="brand footer-brand" href="index.html">
+            
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+            <span class="brand-text">
+              <strong>TOPWHEELS INT</strong>
+              <small>AUTO SALES LLC</small>
+            </span>
+          </a>
+
+          <p>
+            Explore used vehicles and helpful
+            automotive information in North Carolina.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Vehicle Inventory</a>
+          <a href="financing.html">Financing</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get in Touch</h3>
+          <a href="tel:+13366874162">
+            (336) 687-4162
+          </a>
+          <a href="mailto:sales@topwheelsinternational.com">
+            sales@topwheelsinternational.com
+          </a>
+          <p>North Carolina, USA</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year">2026</span>
+          TopWheels Int, Auto Sales LLC.
+          All rights reserved.
+        </p>
+
+        <p>
+          Designed for an organized, accessible
+          vehicle shopping experience.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

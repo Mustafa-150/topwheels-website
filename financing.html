@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Financing Information | TopWheels Int, Auto Sales LLC</title>
+  <meta name="description" content="Explore auto financing information, estimate monthly vehicle payments, and learn about financing considerations at TopWheels Int.">
+  <meta name="theme-color" content="#101318">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="TopWheels Int homepage">
+       
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+        <span class="brand-text">
+          <strong>TOPWHEELS INT</strong>
+          <small>AUTO SALES LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+              aria-label="Open navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-navigation"
+           aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="financing.html" class="active" aria-current="page">Financing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="header-contact" href="tel:+13366874162">
+        Call (336) 687-4162
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- FINANCING HERO -->
+    <section class="finance-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Financing</span>
+        </nav>
+
+        <span class="section-kicker">PLAN YOUR PURCHASE</span>
+        <h1>Financing Made <span>Understandable.</span></h1>
+        <p>
+          Explore financing concepts, estimate monthly payments,
+          and prepare questions before purchasing your next vehicle.
+        </p>
+
+        <div class="finance-hero-actions">
+          <a href="#payment-calculator" class="btn btn-primary">
+            Estimate Your Payment →
+          </a>
+          <a href="contact.html" class="btn btn-outline">
+            Ask a Question
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCING BENEFITS -->
+    <section class="section finance-intro">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">UNDERSTAND YOUR OPTIONS</span>
+          <h2>Plan Before You Buy</h2>
+          <p>
+            Understanding the main parts of an auto loan can help
+            you compare financing options more effectively.
+          </p>
+        </div>
+
+        <div class="finance-info-grid">
+          <article class="finance-info-card">
+            <span class="finance-info-number">01</span>
+            <h3>Vehicle Price</h3>
+            <p>
+              Start with the vehicle's purchase price, then account
+              for applicable taxes, fees, and other costs.
+            </p>
+          </article>
+
+          <article class="finance-info-card">
+            <span class="finance-info-number">02</span>
+            <h3>Down Payment</h3>
+            <p>
+              A larger down payment generally reduces the amount
+              you need to finance.
+            </p>
+          </article>
+
+          <article class="finance-info-card">
+            <span class="finance-info-number">03</span>
+            <h3>Loan Terms</h3>
+            <p>
+              Interest rate and loan length affect both monthly
+              payments and the total interest paid.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT CALCULATOR -->
+    <section class="section finance-calculator-section"
+             id="payment-calculator">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">PAYMENT PLANNING TOOL</span>
+            <h2>Monthly Payment Calculator</h2>
+            <p>
+              Enter example loan details to estimate a monthly payment.
+            </p>
+          </div>
+        </div>
+
+        <div class="finance-calculator-layout">
+
+          <div class="finance-calculator-card">
+            <form id="paymentCalculator" novalidate>
+
+              <div class="finance-form-field">
+                <label for="financePrice">Vehicle Price ($)</label>
+                <input id="financePrice" name="price" type="number"
+                       min="0" max="10000000" step="100"
+                       value="25000" required>
+              </div>
+
+              <div class="finance-form-field">
+                <label for="financeDown">Down Payment ($)</label>
+                <input id="financeDown" name="down" type="number"
+                       min="0" max="10000000" step="100"
+                       value="5000" required>
+              </div>
+
+              <div class="finance-form-field">
+                <label for="financeRate">Annual Interest Rate (%)</label>
+                <input id="financeRate" name="rate" type="number"
+                       min="0" max="100" step="0.1"
+                       value="7.5" required>
+              </div>
+
+              <div class="finance-form-field">
+                <label for="financeTerm">Loan Term</label>
+                <select id="financeTerm" name="term">
+                  <option value="24">24 months</option>
+                  <option value="36">36 months</option>
+                  <option value="48">48 months</option>
+                  <option value="60" selected>60 months</option>
+                  <option value="72">72 months</option>
+                  <option value="84">84 months</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary finance-calc-button">
+                Calculate Payment →
+              </button>
+            </form>
+          </div>
+
+          <div class="finance-result-card" aria-live="polite">
+            <span class="section-kicker">YOUR ESTIMATED PAYMENT</span>
+
+            <div class="finance-payment-amount" id="monthlyPayment">
+              —
+            </div>
+            <p class="finance-payment-caption">Estimated per month</p>
+
+            <div class="finance-result-row">
+              <span>Estimated Loan Amount</span>
+              <strong id="loanAmount">—</strong>
+            </div>
+
+            <div class="finance-result-row">
+              <span>Total Interest</span>
+              <strong id="totalInterest">—</strong>
+            </div>
+
+            <div class="finance-result-row">
+              <span>Total Loan Payments</span>
+              <strong id="totalPayments">—</strong>
+            </div>
+
+            <p class="finance-calculator-error"
+               id="calculatorError"
+               role="alert"
+               hidden></p>
+
+            <p class="finance-disclaimer">
+              This calculator is for educational estimates only.
+              It assumes a fixed interest rate and equal monthly
+              payments. It excludes taxes, registration, dealer
+              fees, insurance, and other costs unless included in
+              the vehicle price. It is not a financing offer,
+              credit decision, or guarantee of terms.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCING PROCESS -->
+    <section class="section finance-process-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">BEFORE YOU FINANCE</span>
+          <h2>Three Useful Steps</h2>
+        </div>
+
+        <div class="finance-steps">
+          <article class="finance-step">
+            <span>01</span>
+            <h3>Set Your Budget</h3>
+            <p>
+              Consider your monthly budget alongside insurance,
+              fuel or charging, maintenance, and ownership costs.
+            </p>
+          </article>
+
+          <article class="finance-step">
+            <span>02</span>
+            <h3>Compare Loan Terms</h3>
+            <p>
+              Review the annual percentage rate (APR), loan
+              duration, monthly payment, and total cost.
+            </p>
+          </article>
+
+          <article class="finance-step">
+            <span>03</span>
+            <h3>Ask Questions</h3>
+            <p>
+              Clarify fees, payment terms, and available options
+              before agreeing to any financing arrangement.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section finance-faq-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="section-kicker">COMMON QUESTIONS</span>
+          <h2>Financing FAQs</h2>
+        </div>
+
+        <div class="finance-faq-list">
+
+          <details class="finance-faq">
+            <summary>What is a down payment?</summary>
+            <p>
+              A down payment is money paid upfront toward a
+              vehicle purchase. It reduces the amount financed.
+            </p>
+          </details>
+
+          <details class="finance-faq">
+            <summary>Does a longer loan term lower monthly payments?</summary>
+            <p>
+              A longer term often lowers the monthly payment,
+              but may increase total interest paid over the life
+              of the loan.
+            </p>
+          </details>
+
+          <details class="finance-faq">
+            <summary>What is the difference between interest rate and APR?</summary>
+            <p>
+              The interest rate describes the cost of borrowing
+              principal. APR generally includes the interest rate
+              and certain financing charges, making it useful
+              for comparing loan offers.
+            </p>
+          </details>
+
+          <details class="finance-faq">
+            <summary>Does the calculator submit my information?</summary>
+            <p>
+              No. The calculator runs in your browser and does
+              not submit its values to a dealership or lender.
+            </p>
+          </details>
+
+          <details class="finance-faq">
+            <summary>Can I apply for financing on this website?</summary>
+            <p>
+              This website currently provides financing information
+              only. It does not process loan applications or
+              provide credit decisions.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="finance-contact-section">
+      <div class="container">
+        <div class="finance-contact-inner">
+          <div>
+            <span class="section-kicker">NEED MORE INFORMATION?</span>
+            <h2>Questions About Financing?</h2>
+            <p>
+              Contact TopWheels Int to ask about the vehicle
+              purchasing process. Do not send sensitive financial
+              information through ordinary email.
+            </p>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Contact Our Team →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="brand footer-brand" href="index.html">
+           
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+            <span class="brand-text">
+              <strong>TOPWHEELS INT</strong>
+              <small>AUTO SALES LLC</small>
+            </span>
+          </a>
+          <p>
+            Explore used vehicles and helpful automotive
+            information in North Carolina.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Vehicle Inventory</a>
+          <a href="financing.html">Financing</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get in Touch</h3>
+          <a href="tel:+13366874162">(336) 687-4162</a>
+          <a href="mailto:sales@topwheelsinternational.com">
+            sales@topwheelsinternational.com
+          </a>
+          <p>North Carolina, USA</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year">2026</span>
+          TopWheels Int, Auto Sales LLC.
+          All rights reserved.
+        </p>
+        <p>
+          Designed for an organized, accessible
+          vehicle shopping experience.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

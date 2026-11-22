@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vehicle Inventory | TopWheels Int, Auto Sales LLC</title>
+  <meta name="description"
+        content="Browse demonstration vehicle listings at TopWheels Int. Search and filter by make, body type, fuel type, and price.">
+
+  <meta name="theme-color" content="#101318">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="index.html"
+         aria-label="TopWheels Int, Auto Sales LLC homepage">
+        
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+
+        <span class="brand-text">
+          <strong>TOPWHEELS INT</strong>
+          <small>AUTO SALES LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav"
+           id="primary-navigation"
+           aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="inventory.html"
+           class="active"
+           aria-current="page">Inventory</a>
+        <a href="financing.html">Financing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="header-contact" href="tel:+13366874162">
+        Call (336) 687-4162
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- INVENTORY HERO -->
+    <section class="inventory-hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Vehicle Inventory</span>
+        </div>
+
+        <span class="section-kicker">
+          EXPLORE YOUR OPTIONS
+        </span>
+
+        <h1>Find Your Next <span>Vehicle.</span></h1>
+
+        <p>
+          Search, filter, and compare vehicles using
+          organized information and useful specifications.
+        </p>
+
+        <div class="inventory-hero-tags">
+          <span>Search by Make</span>
+          <span>Filter by Fuel Type</span>
+          <span>Compare Prices</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INVENTORY CONTENT -->
+    <section class="inventory-section">
+      <div class="container">
+
+        <div class="inventory-layout">
+
+          <!-- FILTER SIDEBAR -->
+          <aside class="filter-sidebar"
+                 aria-labelledby="filter-title">
+
+            <div class="filter-heading">
+              <div>
+                <span class="section-kicker">REFINE RESULTS</span>
+                <h2 id="filter-title">Filters</h2>
+              </div>
+
+              <button id="clearFilters"
+                      class="clear-filters"
+                      type="button">
+                Clear All
+              </button>
+            </div>
+
+            <form id="inventoryFilters"
+                  role="search"
+                  autocomplete="off">
+
+              <div class="filter-group">
+                <label for="search">Search Vehicles</label>
+
+                <input
+                  type="search"
+                  id="search"
+                  name="q"
+                  placeholder="Toyota, SUV, EV..."
+                >
+
+                <small>
+                  Search by year, make, model, or vehicle type.
+                </small>
+              </div>
+
+              <div class="filter-group">
+                <label for="make">Vehicle Make</label>
+
+                <select id="make" name="make">
+                  <option value="Any">All Makes</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="bodyType">Body Type</label>
+
+                <select id="bodyType" name="bodyType">
+                  <option value="Any">All Body Types</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Truck">Truck</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="fuelType">Fuel Type</label>
+
+                <select id="fuelType" name="fuelType">
+                  <option value="Any">All Fuel Types</option>
+                  <option value="Gasoline">Gasoline</option>
+                  <option value="Hybrid">Hybrid</option>
+                  <option value="Electric">Electric</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="price">Price Range</label>
+
+                <select id="price" name="price">
+                  <option value="Any">Any Price</option>
+                  <option value="0-20000">Under $20,000</option>
+                  <option value="20000-30000">$20,000–$29,999</option>
+                  <option value="30000-40000">$30,000–$39,999</option>
+                  <option value="40000-max">$40,000+</option>
+                </select>
+              </div>
+
+            </form>
+
+            <div class="filter-help">
+              <strong>Need assistance?</strong>
+              <p>
+                Have questions about a vehicle?
+                Contact our team for more information.
+              </p>
+
+              <a href="contact.html">
+                Contact Us →
+              </a>
+            </div>
+
+          </aside>
+
+          <!-- INVENTORY RESULTS -->
+          <div class="inventory-results">
+
+            <div class="results-toolbar">
+              <div class="results-info">
+                <span class="section-kicker">
+                  VEHICLE INVENTORY
+                </span>
+
+                <h2>Explore Vehicles</h2>
+
+                <p id="resultCount" aria-live="polite">
+                  Loading vehicles...
+                </p>
+              </div>
+
+              <div class="sort-control">
+                <label for="sort">Sort By</label>
+
+                <select id="sort" name="sort">
+                  <option value="year-desc">Newest Year</option>
+                  <option value="year-asc">Oldest Year</option>
+                  <option value="price-asc">Price: Low to High</option>
+                  <option value="price-desc">Price: High to Low</option>
+                  <option value="mileage-asc">Lowest Mileage</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="inventory-grid"
+                 id="inventoryGrid"
+                 aria-label="Vehicle search results">
+
+              <div class="loading-card">
+                <p>Vehicle inventory will appear here.</p>
+              </div>
+
+            </div>
+
+            <div class="empty-results"
+                 id="emptyResults"
+                 hidden>
+
+              <div class="empty-icon" aria-hidden="true">
+                ⌕
+              </div>
+
+              <h3>No vehicles found</h3>
+
+              <p>
+                Try a different search term
+                or remove some filters.
+              </p>
+
+              <button id="resetEmpty"
+                      class="btn btn-primary"
+                      type="button">
+                Clear Filters
+              </button>
+
+            </div>
+
+            <p class="inventory-disclaimer">
+              These are demonstration vehicle listings
+              created for website development.
+              Prices, specifications, and availability
+              are not verified dealership offers.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INVENTORY CTA -->
+    <section class="inventory-bottom-cta">
+      <div class="container">
+
+        <div class="inventory-cta-inner">
+          <div>
+            <span class="section-kicker">
+              QUESTIONS ABOUT A VEHICLE?
+            </span>
+
+            <h2>We're Here to Help.</h2>
+
+            <p>
+              Contact TopWheels Int for more information
+              about vehicles and the buying process.
+            </p>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">
+            Contact Our Team →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+          <a class="brand footer-brand" href="index.html">
+            
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+
+            <span class="brand-text">
+              <strong>TOPWHEELS INT</strong>
+              <small>AUTO SALES LLC</small>
+            </span>
+          </a>
+
+          <p>
+            Explore used vehicles and helpful
+            automotive information in North Carolina.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Vehicle Inventory</a>
+          <a href="financing.html">Financing</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Get in Touch</h3>
+
+          <a href="tel:+13366874162">
+            (336) 687-4162
+          </a>
+
+          <a href="mailto:sales@topwheelsinternational.com">
+            sales@topwheelsinternational.com
+          </a>
+
+          <p>North Carolina, USA</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="year">2026</span>
+          TopWheels Int, Auto Sales LLC.
+          All rights reserved.
+        </p>
+
+        <p>
+          Designed for an organized, accessible
+          vehicle shopping experience.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

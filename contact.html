@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | TopWheels Int, Auto Sales LLC</title>
+
+  <meta name="description"
+        content="Contact TopWheels Int, Auto Sales LLC to ask questions about vehicle listings, financing information, and the vehicle shopping process.">
+
+  <meta name="theme-color" content="#101318">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand"
+         href="index.html"
+         aria-label="TopWheels Int homepage">
+
+        
+<img
+  class="brand-logo"
+  src="assets/topwheels-logo.jpg.jpeg"
+  alt="TopWheels logo"
+>
+
+
+        <span class="brand-text">
+          <strong>TOPWHEELS INT</strong>
+          <small>AUTO SALES LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-controls="primary-navigation"
+              aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav"
+           id="primary-navigation"
+           aria-label="Main navigation">
+
+        <a href="index.html">Home</a>
+        <a href="inventory.html">Inventory</a>
+        <a href="financing.html">Financing</a>
+        <a href="about.html">About</a>
+
+        <a href="contact.html"
+           class="active"
+           aria-current="page">
+          Contact
+        </a>
+      </nav>
+
+      <a class="header-contact"
+         href="tel:+13366874162">
+        Call (336) 687-4162
+      </a>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+
+      <div class="container">
+
+        <nav class="breadcrumb"
+             aria-label="Breadcrumb">
+
+          <a href="index.html">Home</a>
+
+          <span aria-hidden="true">/</span>
+
+          <span>Contact Us</span>
+
+        </nav>
+
+        <span class="section-kicker">
+          GET IN TOUCH
+        </span>
+
+        <h1>
+          Let's Talk About Your
+          <span>Next Vehicle.</span>
+        </h1>
+
+        <p>
+          Have questions about a vehicle, financing
+          information, or the shopping process?
+          Reach out to TopWheels Int.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT CONTENT -->
+    <section class="contact-main-section">
+
+      <div class="container">
+
+        <div class="contact-layout">
+
+          <!-- CONTACT FORM -->
+          <div class="contact-form-card">
+
+            <div class="contact-form-heading">
+
+              <span class="section-kicker">
+                SEND AN INQUIRY
+              </span>
+
+              <h2>How Can We Help?</h2>
+
+              <p>
+                Complete the form below to prepare
+                an email inquiry to our team.
+              </p>
+
+            </div>
+
+            <!-- SELECTED VEHICLE -->
+            <div id="selectedVehicleBox"
+                 class="contact-selected-vehicle"
+                 hidden>
+
+              <div>
+                <span class="contact-vehicle-label">
+                  YOUR SELECTED VEHICLE
+                </span>
+
+                <strong id="selectedVehicleName">
+                  Vehicle Name
+                </strong>
+
+                <small id="selectedVehicleStock">
+                  Stock Number
+                </small>
+              </div>
+
+              <a id="selectedVehicleLink"
+                 href="inventory.html">
+                View Details →
+              </a>
+
+            </div>
+
+            <form id="contactForm"
+                  novalidate>
+
+              <div class="contact-form-grid">
+
+                <div class="contact-field">
+                  <label for="contactName">
+                    Full Name <span aria-hidden="true">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="100"
+                    required
+                    placeholder="Your full name"
+                  >
+                </div>
+
+                <div class="contact-field">
+                  <label for="contactEmail">
+                    Email Address <span aria-hidden="true">*</span>
+                  </label>
+
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="254"
+                    required
+                    placeholder="you@example.com"
+                  >
+                </div>
+
+                <div class="contact-field">
+                  <label for="contactPhone">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    autocomplete="tel"
+                    maxlength="30"
+                    placeholder="(336) 555-0123"
+                  >
+                </div>
+
+                <div class="contact-field">
+                  <label for="contactTopic">
+                    Inquiry Type <span aria-hidden="true">*</span>
+                  </label>
+
+                  <select
+                    id="contactTopic"
+                    name="topic"
+                    required
+                  >
+                    <option value="">
+                      Select an inquiry type
+                    </option>
+
+                    <option value="Vehicle Inquiry">
+                      Vehicle Inquiry
+                    </option>
+
+                    <option value="Financing Question">
+                      Financing Question
+                    </option>
+
+                    <option value="General Question">
+                      General Question
+                    </option>
+
+                    <option value="Other">
+                      Other
+                    </option>
+                  </select>
+                </div>
+
+              </div>
+
+              <div class="contact-field">
+                <label for="contactMessage">
+                  Your Message <span aria-hidden="true">*</span>
+                </label>
+
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="7"
+                  maxlength="2000"
+                  required
+                  placeholder="Tell us how we can help..."
+                ></textarea>
+              </div>
+
+              <div class="contact-form-notice">
+
+                <span aria-hidden="true">i</span>
+
+                <p>
+                  This form prepares an email in your
+                  email application. It does not send
+                  or store messages directly on this
+                  website. Please do not include
+                  Social Security numbers, banking
+                  details, or other sensitive information.
+                </p>
+
+              </div>
+
+              <p class="contact-form-error"
+                 id="contactFormError"
+                 role="alert"
+                 hidden>
+              </p>
+
+              <button
+                class="btn btn-primary contact-submit"
+                type="submit"
+              >
+                Review My Inquiry →
+              </button>
+
+              <p class="contact-required-note">
+                * Required fields
+              </p>
+
+            </form>
+
+            <!-- EMAIL REVIEW -->
+            <section id="contactReview"
+                     class="contact-review"
+                     aria-labelledby="contactReviewHeading"
+                     hidden>
+
+              <h3 id="contactReviewHeading">
+                Review Your Inquiry
+              </h3>
+
+              <p>
+                Check the information below before
+                opening your email application.
+              </p>
+
+              <pre id="contactReviewText"></pre>
+
+              <div class="contact-review-actions">
+
+                <a id="contactEmailLink"
+                   class="btn btn-primary"
+                   href="mailto:sales@topwheelsinternational.com">
+                  Open Email App →
+                </a>
+
+                <button id="contactEditButton"
+                        class="btn btn-outline"
+                        type="button">
+                  Edit Inquiry
+                </button>
+
+              </div>
+
+              <p class="contact-review-note">
+                Your email application must open
+                successfully, and you must click
+                Send there to complete the inquiry.
+              </p>
+
+            </section>
+
+          </div>
+
+          <!-- CONTACT INFORMATION -->
+          <aside class="contact-sidebar">
+
+            <div class="contact-info-card">
+
+              <span class="section-kicker">
+                CONTACT INFORMATION
+              </span>
+
+              <h2>Reach TopWheels</h2>
+
+              <div class="contact-info-item">
+
+                <div class="contact-info-icon"
+                     aria-hidden="true">
+                  ☎
+                </div>
+
+                <div>
+                  <span>PHONE</span>
+
+                  <a href="tel:+13366874162">
+                    (336) 687-4162
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="contact-info-item">
+
+                <div class="contact-info-icon"
+                     aria-hidden="true">
+                  @
+                </div>
+
+                <div>
+                  <span>EMAIL</span>
+
+                  <a href="mailto:sales@topwheelsinternational.com">
+                    sales@topwheelsinternational.com
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="contact-info-item">
+
+                <div class="contact-info-icon"
+                     aria-hidden="true">
+                  ◉
+                </div>
+
+                <div>
+                  <span>LOCATION</span>
+
+                  <p>North Carolina, USA</p>
+                </div>
+
+              </div>
+
+              <p class="contact-address-note">
+                A specific dealership street address
+                has not been provided on this website.
+                Please contact the business to confirm
+                location and visiting arrangements.
+              </p>
+
+            </div>
+
+            <div class="contact-help-card">
+
+              <span class="section-kicker">
+                EXPLORE MORE
+              </span>
+
+              <h3>Still Comparing Vehicles?</h3>
+
+              <p>
+                Browse the demonstration inventory,
+                compare specifications, and explore
+                vehicle details.
+              </p>
+
+              <a href="inventory.html"
+                 class="btn btn-outline">
+                Browse Inventory →
+              </a>
+
+            </div>
+
+            <div class="contact-help-card">
+
+              <span class="section-kicker">
+                FINANCING INFORMATION
+              </span>
+
+              <h3>Planning Your Budget?</h3>
+
+              <p>
+                Use our educational payment calculator
+                to explore example monthly payments.
+              </p>
+
+              <a href="financing.html"
+                 class="btn btn-outline">
+                Payment Calculator →
+              </a>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="contact-bottom-section">
+
+      <div class="container">
+
+        <div class="contact-bottom-content">
+
+          <div>
+
+            <span class="section-kicker">
+              KEEP EXPLORING
+            </span>
+
+            <h2>
+              Your Next Vehicle Starts with Information.
+            </h2>
+
+            <p>
+              Explore our organized vehicle listings
+              and discover the details that matter.
+            </p>
+
+          </div>
+
+          <a href="inventory.html"
+             class="btn btn-primary">
+            Explore Vehicles →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand-column">
+
+          <a class="brand footer-brand"
+             href="index.html">
+
+            <span class="brand-icon"
+                  aria-hidden="true">TW</span>
+
+            <span class="brand-text">
+              <strong>TOPWHEELS INT</strong>
+              <small>AUTO SALES LLC</small>
+            </span>
+
+          </a>
+
+          <p>
+            Explore used vehicles and helpful
+            automotive information in North Carolina.
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Explore</h3>
+
+          <a href="index.html">Home</a>
+          <a href="inventory.html">Vehicle Inventory</a>
+          <a href="financing.html">Financing</a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Company</h3>
+
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="privacy.html">Privacy Policy</a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Get in Touch</h3>
+
+          <a href="tel:+13366874162">
+            (336) 687-4162
+          </a>
+
+          <a href="mailto:sales@topwheelsinternational.com">
+            sales@topwheelsinternational.com
+          </a>
+
+          <p>North Carolina, USA</p>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="year">2026</span>
+          TopWheels Int, Auto Sales LLC.
+          All rights reserved.
+        </p>
+
+        <p>
+          Designed for an organized, accessible
+          vehicle shopping experience.
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
